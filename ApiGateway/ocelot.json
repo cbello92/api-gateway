@@ -1,0 +1,44 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/concepcion/api/{path}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/{path}",
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey":  "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/chillan/api/{path}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/{path}"
+    },
+    {
+      "UpstreamPathTemplate": "/ptomont/api/{path}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "DownstreamPathTemplate": "/{path}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:21744"
+  }
+}
+
