@@ -1,0 +1,12 @@
+{
+  "Routes": [
+    {
+      "UpstreamHttpMethod": null,
+      "DownstreamPathTemplate": null,
+      "DownstreamHostAndPorts": null,
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    }
+  ]
+}
