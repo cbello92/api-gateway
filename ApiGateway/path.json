@@ -8,5 +8,8 @@
         "AuthenticationProviderKey": "Bearer"
       }
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
 }

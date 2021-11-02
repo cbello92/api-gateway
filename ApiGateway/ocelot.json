@@ -1,44 +1,87 @@
 {
   "Routes": [
     {
-      "UpstreamPathTemplate": "/concepcion/api/{path}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/auth/api/users",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamHostAndPorts": [
         {
           "Host": "jsonplaceholder.typicode.com",
           "Port": 443
         }
       ],
-      "DownstreamPathTemplate": "/{path}",
+      "DownstreamPathTemplate": "/users",
       "AuthorizationOptions": {
-        "AuthenticationProviderKey":  "Bearer"
+        "AuthenticationProviderKey": "Bearer"
       }
     },
     {
-      "UpstreamPathTemplate": "/chillan/api/{path}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/concepcion/api/posts",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "jsonplaceholder.typicode.com",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
-      "DownstreamPathTemplate": "/{path}"
+      "DownstreamPathTemplate": "/posts",
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     {
-      "UpstreamPathTemplate": "/ptomont/api/{path}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/concepcion/api/todos",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "jsonplaceholder.typicode.com",
-          "Port": 443
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
-      "DownstreamPathTemplate": "/{path}"
+      "DownstreamPathTemplate": "/todos",
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/chillan/api/posts",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "chillanapi.cl",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/posts",
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/chillan/api/todos",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "chillanapi.cl",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/todos",
+      "AuthorizationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:21744"
+    "BaseUrl": "https://localhost:5000"
   }
 }
-

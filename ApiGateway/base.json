@@ -1,0 +1,44 @@
+[
+  {
+    "UpstreamPathTemplate": "/auth/api/users",
+    "UpstreamHttpMethod": [ "GET" ],
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "jsonplaceholder.typicode.com",
+        "Port": 443
+      }
+    ],
+    "DownstreamPathTemplate": "/users",
+    "AuthorizationOptions": {
+      "AuthenticationProviderKey": "Bearer"
+    }
+  },
+  {
+    "UpstreamPathTemplate": "/base/api/posts",
+    "UpstreamHttpMethod": [ "GET" ],
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "jsonplaceholder.typicode.com",
+        "Port": 443
+      }
+    ],
+    "DownstreamPathTemplate": "/posts",
+    "AuthorizationOptions": {
+      "AuthenticationProviderKey": "Bearer"
+    }
+  },
+  {
+    "UpstreamPathTemplate": "/base/api/todos",
+    "UpstreamHttpMethod": [ "GET" ],
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "jsonplaceholder.typicode.com",
+        "Port": 443
+      }
+    ],
+    "DownstreamPathTemplate": "/todos",
+    "AuthorizationOptions": {
+      "AuthenticationProviderKey": "Bearer"
+    }
+  }
+]
